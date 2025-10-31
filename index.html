@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DomenAO.cz – Portfolio domén a marketplace AO Group</title>
+
+  <!-- Google Fonts (CZ diakritika) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Roboto', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            ao: {
+              blue: '#1f4ed8', // královská modrá
+              dark: '#0f172a',
+              gold: '#f5b301'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgb(2 6 23 / 0.15)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.75); }
+    .chip-active { background-color: #1f4ed8; color: #fff; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-2xl bg-ao.blue text-white grid place-items-center shadow-soft">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3l8 4v6c0 5-8 8-8 8s-8-3-8-8V7l8-4z"/>
+              <path d="M9 12l3-6 3 6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-lg font-extrabold tracking-tight">DomenAO.cz</div>
+            <div class="text-xs text-slate-500 -mt-0.5">Portfolio domén & marketplace AO Group</div>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#portfolio" class="hover:text-ao.blue">Portfolio</a>
+          <a href="#filtry" class="hover:text-ao.blue">Filtry</a>
+          <a href="#kontakt" class="hover:text-ao.blue">Kontakt</a>
+          <a href="#o-nas" class="hover:text-ao.blue">O nás</a>
+          <a href="#pridat" class="inline-flex items-center gap-2 rounded-full bg-ao.blue px-4 py-2 text-white shadow-soft hover:opacity-90">
+            <span>Přidat doménu</span>
+          </a>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button id="hamburger" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Otevřít menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (portal) -->
+    <div id="mobileMenu" class="md:hidden fixed inset-x-0 top-16 z-50 hidden">
+      <div class="mx-3 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <nav class="flex flex-col p-2 text-sm">
+          <a href="#portfolio" class="px-4 py-3 rounded-xl hover:bg-slate-50">Portfolio</a>
+          <a href="#filtry" class="px-4 py-3 rounded-xl hover:bg-slate-50">Filtry</a>
+          <a href="#kontakt" class="px-4 py-3 rounded-xl hover:bg-slate-50">Kontakt</a>
+          <a href="#o-nas" class="px-4 py-3 rounded-xl hover:bg-slate-50">O nás</a>
+          <a href="#pridat" class="mx-2 my-2 inline-flex items-center justify-center gap-2 rounded-xl bg-ao.blue px-4 py-3 text-white shadow-soft">Přidat doménu</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-ao.dark">
+            Domény, které <span class="text-ao.blue">mají hodnotu</span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-base leading-relaxed">Spravujeme a rozvíjíme portfolio domén AO Group. Najděte název, který vystihne váš projekt, nebo nabídněte spolupráci na stávajících značkách.</p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#portfolio" class="inline-flex items-center justify-center gap-2 rounded-xl bg-ao.blue px-5 py-3 text-white shadow-soft hover:opacity-95">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              Zobrazit celé portfolio
+            </a>
+            <a href="#kontakt" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-slate-800 hover:bg-slate-50">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Poslat nezávaznou nabídku
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+            <div class="rounded-2xl bg-gradient-to-br from-ao.blue/10 to-ao.gold/10 p-6">
+              <div class="text-sm text-slate-600 mb-2">Rychlé vyhledávání</div>
+              <div class="flex gap-2">
+                <input id="searchInput" type="text" placeholder="Hledat v portfoliu (např. ‚reklama‘, ‚auto‘, ‚gastro‘)…" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue"/>
+                <button id="clearSearch" class="rounded-xl border border-slate-300 px-3">Vyčistit</button>
+              </div>
+              <div class="mt-4 text-xs text-slate-500">Tip: použijte klíčová slova podle odvětví nebo přímo název domény.</div>
+            </div>
+
+            <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm" id="quickChips">
+              <button data-chip="Marketing & Reklama" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Marketing & Reklama</button>
+              <button data-chip="Automotive" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Automotive</button>
+              <button data-chip="Gastro & Nápoje" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Gastro & Nápoje</button>
+              <button data-chip="Stavba & Bydlení" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Stavba & Bydlení</button>
+              <button data-chip="Sport & Volný čas" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Sport & Volný čas</button>
+              <button data-chip="Vzdělávání" class="chip rounded-full border px-3 py-2 hover:bg-slate-50">Vzdělávání</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtry -->
+  <section id="filtry" class="border-t border-slate-200 bg-white/60 py-6">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end gap-4">
+        <div class="flex-1">
+          <label class="block text-sm text-slate-600 mb-1">Filtrovat podle kategorie</label>
+          <div class="flex flex-wrap gap-2">
+            <button data-category="all" class="cat rounded-full px-3 py-2 text-sm border border-slate-300 bg-white hover:bg-slate-50">Vše</button>
+            <button data-category="Marketing & Reklama" class="cat rounded-full px-3 py-2 text-sm border">Marketing & Reklama</button>
+            <button data-category="Automotive" class="cat rounded-full px-3 py-2 text-sm border">Automotive</button>
+            <button data-category="Gastro & Nápoje" class="cat rounded-full px-3 py-2 text-sm border">Gastro & Nápoje</button>
+            <button data-category="Stavba & Bydlení" class="cat rounded-full px-3 py-2 text-sm border">Stavba & Bydlení</button>
+            <button data-category="Sport & Volný čas" class="cat rounded-full px-3 py-2 text-sm border">Sport & Volný čas</button>
+            <button data-category="Vzdělávání" class="cat rounded-full px-3 py-2 text-sm border">Vzdělávání</button>
+            <button data-category="Marketplace & Služby" class="cat rounded-full px-3 py-2 text-sm border">Marketplace & Služby</button>
+            <button data-category="Agro & Příroda" class="cat rounded-full px-3 py-2 text-sm border">Agro & Příroda</button>
+            <button data-category="Reality & Ubytování" class="cat rounded-full px-3 py-2 text-sm border">Reality & Ubytování</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1">Stav</label>
+          <select id="statusFilter" class="rounded-xl border border-slate-300 bg-white px-3 py-2">
+            <option value="all">Vše</option>
+            <option value="Aktivní">Aktivní</option>
+            <option value="Rozpracováno">Rozpracováno</option>
+            <option value="Na prodej">Na prodej</option>
+            <option value="K pronájmu">K pronájmu</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div id="cards" class="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+        <!-- Card template example -->
+        
+        <!-- Marketing & Reklama -->
+        <article class="card" data-category="Marketing & Reklama" data-status="Aktivní" data-keywords="reklama billboard mobilni reklamas">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold"><a href="https://www.reklamas.cz" target="_blank" class="hover:text-ao.blue">Reklamas.cz</a></h3>
+                <span class="inline-flex items-center rounded-full bg-green-100 text-green-700 text-xs px-2 py-1">Aktivní</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Mobilní reklama, hrdina vaší reklamy, síť nosičů (kola, auta, LED).</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Marketing & Reklama</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Nabídka%20na%20Reklamas.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Zaslat nabídku</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Marketplace & Služby" data-status="Rozpracováno" data-keywords="startao start ao brand launch balicky">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">StartAO.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Balíčky pro začínající podnikatele: doména, logo, miniweb.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Marketplace & Služby</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Spolupr%C3%A1ce%20StartAO.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Spolupráce</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Marketplace & Služby" data-status="Aktivní" data-keywords="domeny marketplace domenao portfolio">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">DomenAO.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-green-100 text-green-700 text-xs px-2 py-1">Aktivní</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Centrální rozcestník a marketplace domén AO Group.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Marketplace & Služby</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Dotaz%20na%20DomenAO.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Dotaz</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Automotive -->
+        <article class="card" data-category="Automotive" data-status="Rozpracováno" data-keywords="auta autopujcovna prodej pronajem autao">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Autao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Marketplace půjčovna & prodej vozidel, filtry jako Sauto.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Automotive</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Z%C3%A1jem%20o%20Autao.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Zájem</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Reality & Ubytování -->
+        <article class="card" data-category="Reality & Ubytování" data-status="Rozpracováno" data-keywords="chata chaty pronajem ubytovani chatao">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Chatao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Pronájem chat a chalup, jednoduché filtrování lokality a termínu.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Reality & Ubytování</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Z%C3%A1jem%20o%20Chatao.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Zájem</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sport & Volný čas -->
+        <article class="card" data-category="Sport & Volný čas" data-status="Rozpracováno" data-keywords="fit fitness zdravi fitnao">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Fitnao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Fitness marketplace, plány, výživa, komunitní tréninky.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Sport & Volný čas</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Spolupr%C3%A1ce%20Fitnao.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Spolupráce</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Agro & Příroda -->
+        <article class="card" data-category="Agro & Příroda" data-status="Na prodej" data-keywords="farma agro zemedelstvi farmao">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Farmao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Farmářské produkty, přímý prodej, trhy, komunitní bedýnky.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Agro & Příroda</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=N%C3%A1kup%20dom%C3%A9ny%20Farmao.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stavba & Bydlení -->
+        <article class="card" data-category="Stavba & Bydlení" data-status="Aktivní" data-keywords="sklad kontejnery regaly mobilnisklad mobilni sklad">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold"><a href="https://www.mobilnisklad.cz" target="_blank" class="hover:text-ao.blue">Mobilnisklad.cz</a></h3>
+                <span class="inline-flex items-center rounded-full bg-green-100 text-green-700 text-xs px-2 py-1">Aktivní</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Mobilní sklady, kontejnery, regály – pro stavby i domácnosti.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Stavba & Bydlení</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Spolupr%C3%A1ce%20Mobilnisklad.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Spolupráce</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Stavba & Bydlení" data-status="Rozpracováno" data-keywords="beton prefabrikaty ploty czbeton">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">CZBETON.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Prefabrikované betonové prvky, záhony, ploty, panely.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Stavba & Bydlení</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Z%C3%A1jem%20o%20CZBETON.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Zájem</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gastro & Nápoje -->
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="pivo pivao pivarstvi gastro">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Pivao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Pivní magazín, mini pivovar, e‑shop, databáze podniků.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=N%C3%A1kup%20dom%C3%A9ny%20Pivao.cz" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="burger burgrio burger bar gastro">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Burgrio.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Burger bistro / food truck / komunity kolem street foodu.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Burgrio.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="vino vinoteka vinice vinao">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Vinao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Vinotéka, degustační klub, blog o vinařství.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Vinao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="rum rumao rumclub bar">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Rumao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Rum klub / e‑shop / edukace destilátů.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Rumao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="gourmet gurman gurmao gastro">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Gurmao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Gurmánský magazín, eventy, gastro mapy.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Gurmao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stavba & Bydlení -->
+        <article class="card" data-category="Stavba & Bydlení" data-status="Na prodej" data-keywords="bedna box bednao sklad kov drevo">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Bednao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Bedny, boxy, organizéry – e‑shop / půjčovna.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Stavba & Bydlení</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Bednao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Zdraví / byliny -->
+        <article class="card" data-category="Vzdělávání" data-status="Na prodej" data-keywords="herbal byliny herbao zdravi">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Herbao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Bylinky, čaje, edukace, blog, e‑shop.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Vzdělávání</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Herbao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Agro -->
+        <article class="card" data-category="Agro & Příroda" data-status="Na prodej" data-keywords="agro zemedelstvi agroa farma">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Agroa.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Agro portál / trh, poptávky a nabídky.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Agro & Příroda</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Agroa.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stavba -->
+        <article class="card" data-category="Stavba & Bydlení" data-status="Rozpracováno" data-keywords="ploty poptej plot poptejplot stavebnictvi">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Poptejplot.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-100 text-yellow-800 text-xs px-2 py-1">Rozpracováno</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Poptávkový portál na ploty a montáže.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Stavba & Bydlení</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Poptejplot.cz%20-%20spolupr%C3%A1ce" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Spolupráce</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Marketplace & Služby" data-status="Na prodej" data-keywords="poptavka poptej cenu poptejcenu">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Poptejcenu.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Srovnávač a poptávkový systém na služby a výrobky.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Marketplace & Služby</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Poptejcenu.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Marketplace & Služby" data-status="Na prodej" data-keywords="sleva slevy slevao cashback">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Slevao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Agregátor slev, katalog akcí, kupóny.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Marketplace & Služby</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Slevao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Vzdělávání" data-status="Na prodej" data-keywords="kurzy pro vzdelavani kurzy.pro edtech">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Kurzy.pro</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Platforma pro on‑line kurzy a mentoring.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Vzdělávání</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Kurzy.pro%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Gastro & Nápoje" data-status="Na prodej" data-keywords="lahodna volba kava delikatesy lahodnavolba">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Lahodnavolba.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Káva, delikatesy, dárkové boxy – magazín / e‑shop.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Gastro & Nápoje</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Lahodnavolba.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Sport & Volný čas" data-status="Na prodej" data-keywords="ryby rybar rybao fishing">
+          <div class="h-full rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col">
+            <div class="p-5 flex-1">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-bold">Rybao.cz</h3>
+                <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-800 text-xs px-2 py-1">Na prodej</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Rybářský portál, revíry, výbava, komunita.</p>
+              <div class="mt-3 text-xs text-slate-500">Kategorie: Sport & Volný čas</div>
+            </div>
+            <div class="p-5 pt-0 flex gap-2">
+              <a href="mailto:ao@domenao.cz?subject=Rybao.cz%20-%20n%C3%A1kup" class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm">Nabídnout cenu</a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-ao.blue px-3 py-2 text-sm text-white">Detail</a>
+            </div>
+          </div>
+        </article>
+      
+      </div>
+
+      <!-- Empty state -->
+      <div id="emptyState" class="hidden mt-10 rounded-2xl border border-dashed border-slate-300 p-8 text-center text-slate-500">
+        Nic nenalezeno. Upravte filtr nebo zkuste jiné klíčové slovo.
+      </div>
+    </div>
+  </section>
+
+  <!-- O nás -->
+  <section id="o-nas" class="py-12 border-t border-slate-200 bg-white/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-10 items-start">
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl font-extrabold">O DomenAO</h2>
+          <p class="mt-2 text-slate-600">DomenAO.cz je centrální rozcestník a marketplace domén z ekosystému AO Group. U každé domény usilujeme o jasný koncept, promyšlený byznys model a čistý design.</p>
+        </div>
+        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-sm text-slate-500">Strategie</div>
+            <div class="mt-1 font-semibold">Prodej, pronájem i joint‑venture</div>
+            <p class="mt-2 text-sm text-slate-600">U atraktivních brandů preferujeme spolupráci a sdílený růst. U vybraných domén přijímáme přímé nabídky na odkup.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-sm text-slate-500">Design & UX</div>
+            <div class="mt-1 font-semibold">Konzistence napříč AO projekty</div>
+            <p class="mt-2 text-sm text-slate-600">Jednotné komponenty, filtry, karty a typografie (Roboto) s plnou podporou češtiny.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="py-12">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-2xl font-extrabold">Kontakt & nabídky</h2>
+        <p class="mt-2 text-slate-600">Napište stručně svou představu a rámcovou nabídku. Odpovíme co nejdříve.</p>
+        <form class="mt-6 grid gap-4" onsubmit="event.preventDefault(); alert('Děkujeme! Zpráva byla odeslána (demo).'); this.reset();">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input required type="text" placeholder="Jméno" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue">
+            <input required type="email" placeholder="E‑mail" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue">
+          </div>
+          <input type="text" placeholder="Doména (pokud se váže k nabídce)" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue">
+          <textarea required rows="4" placeholder="Vaše zpráva / nabídka" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue"></textarea>
+          <div class="flex items-center justify-between">
+            <label class="inline-flex items-center gap-2 text-sm text-slate-600"><input type="checkbox" class="rounded" required> Souhlasím se zpracováním údajů</label>
+            <button class="rounded-xl bg-ao.blue px-5 py-3 text-white shadow-soft hover:opacity-95">Odeslat</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Přidat doménu -->
+  <section id="pridat" class="py-12 border-t border-slate-200 bg-white/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-2xl font-extrabold">Chcete přidat svou doménu do portfolia?</h2>
+            <p class="mt-2 text-slate-600">Umíme doménu ocenit, navrhnout koncept a připravit mini‑landing během pár dní. Nabízíme i společný projekt (vývoj + marketing za podíl).</p>
+          </div>
+          <div class="flex gap-3 justify-end">
+            <a href="#kontakt" class="rounded-xl border border-slate-300 bg-white px-5 py-3 hover:bg-slate-50">Nezávazně poptat</a>
+            <a href="mailto:ao@domenao.cz?subject=P%C5%99idat%20dom%C3%A9nu%20do%20portfolia" class="rounded-xl bg-ao.blue px-5 py-3 text-white shadow-soft hover:opacity-95">Napsat e‑mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white/80 py-8 text-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="text-slate-600">© <span id="year"></span> AO Group • DomenAO.cz</div>
+        <div class="flex flex-wrap gap-4 text-slate-600">
+          <a href="#o-nas" class="hover:text-ao.blue">O nás</a>
+          <a href="#kontakt" class="hover:text-ao.blue">Kontakt</a>
+          <a href="#" class="hover:text-ao.blue">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Init icons
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+
+    // Mobile menu toggle + auto-close on nav click
+    const burger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const toggleMenu = () => menu.classList.toggle('hidden');
+    burger.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+    menu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') { menu.classList.add('hidden'); }
+    });
+    // Close menu on outside click or scroll
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('hidden')) {
+        const within = menu.contains(e.target) || burger.contains(e.target);
+        if (!within) menu.classList.add('hidden');
+      }
+    });
+    document.addEventListener('scroll', () => menu.classList.add('hidden'));
+
+    // Search + Filter logic
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearch');
+    const statusFilter = document.getElementById('statusFilter');
+    const catButtons = document.querySelectorAll('.cat');
+    const chips = document.querySelectorAll('.chip');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const emptyState = document.getElementById('emptyState');
+
+    let activeCategory = 'all';
+
+    function normalize(s){ return (s || '').toString().toLowerCase(); }
+
+    function applyFilters(){
+      const q = normalize(searchInput.value);
+      const st = statusFilter.value;
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        const status = card.dataset.status;
+        const kw = card.dataset.keywords + ' ' + card.querySelector('h3').innerText + ' ' + card.querySelector('p').innerText;
+        const matchQ = !q || normalize(kw).includes(q);
+        const matchCat = activeCategory === 'all' || cat === activeCategory;
+        const matchSt = st === 'all' || st === status;
+        const show = matchQ && matchCat && matchSt;
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+      emptyState.classList.toggle('hidden', visibleCount !== 0);
+    }
+
+    function setActiveCategory(cat){
+      activeCategory = cat;
+      catButtons.forEach(b => b.classList.toggle('chip-active', b.dataset.category === cat));
+      applyFilters();
+    }
+
+    // Events
+    searchInput.addEventListener('input', applyFilters);
+    clearBtn.addEventListener('click', () => { searchInput.value=''; applyFilters(); });
+    statusFilter.addEventListener('change', applyFilters);
+    catButtons.forEach(btn => btn.addEventListener('click', () => setActiveCategory(btn.dataset.category)));
+    chips.forEach(ch => ch.addEventListener('click', () => setActiveCategory(ch.dataset.chip)));
+
+    // Default state
+    setActiveCategory('all');
+  </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prodat doménu – DomenAO.cz</title>
+
+  <meta name="description" content="Chcete prodat nebo pronajmout doménu? Nechte si ji nezávazně ocenit. DomenAO.cz – portfolio domén AO Group." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1f4ed8" />
+  <link rel="canonical" href="https://www.domenao.cz/prodat-domenu.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prodat doménu – DomenAO.cz" />
+  <meta property="og:description" content="Nezávazné ocenění domény, nabídka odkupu, pronájmu nebo spolupráce (joint-venture)." />
+  <meta property="og:url" content="https://www.domenao.cz/prodat-domenu.html" />
+  <meta property="og:image" content="https://www.domenao.cz/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Fonts (CZ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Roboto', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            ao: {
+              blue: '#1f4ed8',
+              dark: '#0f172a',
+              gold: '#f5b301'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgb(2 6 23 / 0.15)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.82); }
+    svg { display:block; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900 font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3" aria-label="DomenAO.cz – domů">
+          <div class="h-10 w-10 rounded-2xl grid place-items-center shadow-soft" style="background:#1f4ed8;color:#fff">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+              <path d="M12 3l8 4v6c0 5-8 8-8 8s-8-3-8-8V7l8-4z"/>
+              <path d="M9 12l3-6 3 6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-lg font-extrabold tracking-tight">DomenAO.cz</div>
+            <div class="text-xs text-slate-700 -mt-0.5" style="color:#334155">Prodat doménu</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#jak" class="hover:text-ao.blue">Jak to funguje</a>
+          <a href="#form" class="hover:text-ao.blue">Nezávazné ocenění</a>
+          <a href="#faq" class="hover:text-ao.blue">FAQ</a>
+          <a href="index.html#portfolio" class="inline-flex items-center gap-2 rounded-full bg-ao.blue px-4 py-2 text-white shadow-soft hover:opacity-90" style="background:#1f4ed8;color:#fff">Zpět na portfolio</a>
+        </nav>
+
+        <button id="hamburger" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Otevřít menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2">
+            <path d="M4 6h16"/>
+            <path d="M4 12h16"/>
+            <path d="M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden fixed inset-x-0 top-16 z-50 hidden">
+      <div class="mx-3 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <nav class="flex flex-col p-2 text-sm">
+          <a href="#jak" class="px-4 py-3 rounded-xl hover:bg-slate-50">Jak to funguje</a>
+          <a href="#form" class="px-4 py-3 rounded-xl hover:bg-slate-50">Nezávazné ocenění</a>
+          <a href="#faq" class="px-4 py-3 rounded-xl hover:bg-slate-50">FAQ</a>
+          <a href="index.html#portfolio" class="mx-2 my-2 inline-flex items-center justify-center gap-2 rounded-xl bg-ao.blue px-4 py-3 text-white shadow-soft" style="background:#1f4ed8;color:#fff">Zpět na portfolio</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-ao.dark">
+            Prodat nebo <span class="text-ao.blue">pronajmout</span> doménu
+          </h1>
+          <p class="mt-4 text-slate-900 text-base leading-relaxed">
+            Pošli doménu, stručný popis a představu. My uděláme rychlé nezávazné vyhodnocení: <strong>odkup</strong>, <strong>pronájem</strong> nebo <strong>spolupráce (joint‑venture)</strong>.
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#form" class="inline-flex items-center justify-center gap-2 rounded-xl bg-ao.blue px-5 py-3 text-white shadow-soft hover:opacity-95" style="background:#1f4ed8;color:#fff">
+              Nezávazně ocenit
+            </a>
+            <a href="#jak" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-slate-800 hover:bg-slate-50">
+              Jak to funguje
+            </a>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+              <div class="font-bold">Odpověď</div>
+              <div class="text-slate-700">co nejdříve</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+              <div class="font-bold">Možnosti</div>
+              <div class="text-slate-700">odkup / pronájem / JV</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+              <div class="font-bold">Bez závazků</div>
+              <div class="text-slate-700">jen nabídka</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-sm font-semibold text-slate-700">Co nám pošli (ideálně):</div>
+            <ul class="mt-4 space-y-3 text-sm text-slate-800">
+              <li class="flex gap-2"><span class="mt-0.5 inline-block h-2 w-2 rounded-full" style="background:#1f4ed8"></span> Název domény</li>
+              <li class="flex gap-2"><span class="mt-0.5 inline-block h-2 w-2 rounded-full" style="background:#1f4ed8"></span> Pár slov: na co se hodí</li>
+              <li class="flex gap-2"><span class="mt-0.5 inline-block h-2 w-2 rounded-full" style="background:#1f4ed8"></span> Stav: prodáváš / pronajímáš / JV</li>
+              <li class="flex gap-2"><span class="mt-0.5 inline-block h-2 w-2 rounded-full" style="background:#1f4ed8"></span> Tvoje představa ceny (pokud máš)</li>
+            </ul>
+            <div class="mt-6 rounded-2xl bg-slate-50 border border-slate-200 p-4 text-sm text-slate-700">
+              Tip: Pokud má doména historii (web, odkazy, návštěvnost), napiš to. Pomůže to ocenění.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jak to funguje -->
+  <section id="jak" class="scroll-mt-24 py-12 border-t border-slate-200 bg-white/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Jak to funguje</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <div class="text-xs font-semibold text-slate-500">KROK 1</div>
+          <div class="mt-1 font-bold">Pošli doménu</div>
+          <p class="mt-2 text-sm text-slate-800">Vyplň formulář, nebo napiš e-mail. Stačí minimum informací.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <div class="text-xs font-semibold text-slate-500">KROK 2</div>
+          <div class="mt-1 font-bold">Vyhodnocení</div>
+          <p class="mt-2 text-sm text-slate-800">Odhad hodnoty + návrh: odkup, pronájem nebo spolupráce.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <div class="text-xs font-semibold text-slate-500">KROK 3</div>
+          <div class="mt-1 font-bold">Dohoda</div>
+          <p class="mt-2 text-sm text-slate-800">Když to sedí, domluvíme podmínky a bezpečný převod.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <div class="font-bold">Možnosti spolupráce</div>
+        <div class="mt-3 grid lg:grid-cols-3 gap-4 text-sm">
+          <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+            <div class="font-semibold">Odkup</div>
+            <div class="mt-1 text-slate-700">Jednorázová částka, rychlé řešení.</div>
+          </div>
+          <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+            <div class="font-semibold">Pronájem</div>
+            <div class="mt-1 text-slate-700">Měsíční/roční platba, doména zůstává tvoje.</div>
+          </div>
+          <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
+            <div class="font-semibold">Joint‑venture</div>
+            <div class="mt-1 text-slate-700">Společný projekt: vývoj + marketing za podíl.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="form" class="scroll-mt-24 py-12">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-2xl font-extrabold">Nezávazné ocenění domény</h2>
+        <p class="mt-2 text-slate-800">Formulář je zatím <strong>demo</strong> (bez backendu). Později napojíme odesílání na e-mail nebo databázi.</p>
+
+        <form id="sellForm" class="mt-6 grid gap-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input name="name" required type="text" placeholder="Jméno" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue" />
+            <input name="email" required type="email" placeholder="E-mail" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue" />
+          </div>
+
+          <input name="domain" required type="text" placeholder="Doména (např. example.cz)" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue" />
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <select name="type" class="rounded-xl border border-slate-300 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-ao.blue">
+              <option value="odkup">Chci prodat (odkup)</option>
+              <option value="pronajem">Chci pronajmout</option>
+              <option value="jv">Chci spolupráci (joint-venture)</option>
+              <option value="nevim">Nevím – poraďte</option>
+            </select>
+            <input name="price" type="text" placeholder="Představa ceny (volitelné)" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue" />
+          </div>
+
+          <textarea name="notes" rows="5" required placeholder="Krátký popis: na co se hodí, historie, návštěvnost, odkazy…" class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ao.blue"></textarea>
+
+          <label class="inline-flex items-center gap-2 text-sm text-slate-800">
+            <input id="consent" type="checkbox" class="rounded" required />
+            Souhlasím se zpracováním údajů
+          </label>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div class="text-sm text-slate-600">Kontakt: <a class="font-semibold hover:underline" href="mailto:info@domenao.cz">info@domenao.cz</a></div>
+            <button class="rounded-xl bg-ao.blue px-5 py-3 text-white shadow-soft hover:opacity-95" style="background:#1f4ed8;color:#fff">Odeslat</button>
+          </div>
+
+          <p id="sellMsg" class="hidden text-sm text-green-700 bg-green-50 border border-green-200 rounded-xl px-4 py-3"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="scroll-mt-24 py-12 border-t border-slate-200 bg-white/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">FAQ</h2>
+      <div class="mt-6 grid lg:grid-cols-2 gap-6">
+        <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <summary class="font-bold cursor-pointer">Kolik stojí ocenění?</summary>
+          <p class="mt-3 text-sm text-slate-800">Nezávazné vyhodnocení je zdarma.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <summary class="font-bold cursor-pointer">Jak probíhá převod domény?</summary>
+          <p class="mt-3 text-sm text-slate-800">Domluvíme bezpečný postup podle registrátora (AUTH kód / změna držitele / převod). Vše krok za krokem.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <summary class="font-bold cursor-pointer">Co když nemám představu o ceně?</summary>
+          <p class="mt-3 text-sm text-slate-800">V pohodě. Napiš jen doménu a základní info. Doporučíme rozumný rozsah.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <summary class="font-bold cursor-pointer">Děláte i pronájem?</summary>
+          <p class="mt-3 text-sm text-slate-800">Ano. Můžeme nastavit krátkodobý i dlouhodobý pronájem s jasnými podmínkami.</p>
+        </details>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft text-sm text-slate-700">
+        Poznámka: Tato stránka je MVP. Až budeš chtít, napojíme odesílání formuláře na Formspree / Google Apps Script / vlastní backend.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white/80 py-8 text-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="text-slate-600">© <span id="year"></span> AO Group • DomenAO.cz</div>
+        <div class="flex flex-wrap gap-4 text-slate-600">
+          <a href="index.html" class="hover:text-ao.blue">Domů</a>
+          <a href="#form" class="hover:text-ao.blue">Ocenění</a>
+          <a href="#" class="hover:text-ao.blue">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      // mobile menu safe
+      const burger = document.getElementById('hamburger');
+      const menu = document.getElementById('mobileMenu');
+      const on = (el, ev, fn) => { if (el) el.addEventListener(ev, fn); };
+
+      function setMenu(open){
+        if (!menu || !burger) return;
+        const willOpen = !!open;
+        menu.classList.toggle('hidden', !willOpen);
+        document.body.classList.toggle('overflow-hidden', willOpen);
+        burger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      }
+
+      on(burger, 'click', (e) => {
+        e.stopPropagation();
+        if (!menu) return;
+        setMenu(menu.classList.contains('hidden'));
+      });
+
+      on(document, 'click', (e) => {
+        if (!menu || !burger) return;
+        if (menu.classList.contains('hidden')) return;
+        const within = menu.contains(e.target) || burger.contains(e.target);
+        if (!within) setMenu(false);
+      });
+
+      on(document, 'keydown', (e) => {
+        if (e.key === 'Escape') setMenu(false);
+      });
+
+      // form demo
+      const form = document.getElementById('sellForm');
+      const msg = document.getElementById('sellMsg');
+
+      on(form, 'submit', (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const domain = (fd.get('domain') || '').toString().trim();
+        const name = (fd.get('name') || '').toString().trim();
+        if (msg) {
+          msg.classList.remove('hidden');
+          msg.textContent = `Děkujeme, ${name || 'díky'}! Přijali jsme požadavek na doménu ${domain || ''} (demo).`;
+        }
+        form.reset();
+        setTimeout(() => msg && msg.classList.add('hidden'), 5000);
+      });
+
+      // mini test
+      try {
+        if (!form) throw new Error('Chybí #sellForm');
+        if (!document.getElementById('consent')) throw new Error('Chybí #consent');
+        console.log('[Prodat doménu] ✅ Self-test OK');
+      } catch (e) {
+        console.warn('[Prodat doménu] ⚠️ Self-test FAIL:', e);
+      }
+    });
+  </script>
+</body>
+</html>

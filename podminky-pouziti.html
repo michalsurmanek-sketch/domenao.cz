@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Podmínky použití – DomenAO.cz</title>
+
+  <meta name="description" content="Podmínky použití webu DomenAO.cz – pravidla pro používání webu, odpovědnost, obsah a kontakty." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1f4ed8" />
+  <link rel="canonical" href="https://www.domenao.cz/podminky-pouziti.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Podmínky použití – DomenAO.cz" />
+  <meta property="og:description" content="Pravidla používání webu DomenAO.cz, odpovědnost a informace pro uživatele." />
+  <meta property="og:url" content="https://www.domenao.cz/podminky-pouziti.html" />
+  <meta property="og:image" content="https://www.domenao.cz/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Fonts (CZ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Roboto', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            ao: {
+              blue: '#1f4ed8',
+              dark: '#0f172a'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgb(2 6 23 / 0.15)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.82); }
+    svg { display:block; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900 font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3" aria-label="DomenAO.cz – domů">
+          <div class="h-10 w-10 rounded-2xl grid place-items-center shadow-soft" style="background:#1f4ed8;color:#fff">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+              <path d="M12 3l8 4v6c0 5-8 8-8 8s-8-3-8-8V7l8-4z"/>
+              <path d="M9 12l3-6 3 6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-lg font-extrabold tracking-tight">DomenAO.cz</div>
+            <div class="text-xs text-slate-700 -mt-0.5" style="color:#334155">Podmínky použití</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#prehled" class="hover:text-ao.blue">Přehled</a>
+          <a href="#obsah" class="hover:text-ao.blue">Obsah webu</a>
+          <a href="#odpovednost" class="hover:text-ao.blue">Odpovědnost</a>
+          <a href="#kontakt" class="hover:text-ao.blue">Kontakt</a>
+          <a href="index.html" class="inline-flex items-center gap-2 rounded-full bg-ao.blue px-4 py-2 text-white shadow-soft hover:opacity-90" style="background:#1f4ed8;color:#fff">Zpět</a>
+        </nav>
+
+        <button id="hamburger" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Otevřít menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2">
+            <path d="M4 6h16"/>
+            <path d="M4 12h16"/>
+            <path d="M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden fixed inset-x-0 top-16 z-50 hidden">
+      <div class="mx-3 rounded-2xl border border-slate-200 bg-white shadow-soft">
+        <nav class="flex flex-col p-2 text-sm">
+          <a href="#prehled" class="px-4 py-3 rounded-xl hover:bg-slate-50">Přehled</a>
+          <a href="#obsah" class="px-4 py-3 rounded-xl hover:bg-slate-50">Obsah webu</a>
+          <a href="#odpovednost" class="px-4 py-3 rounded-xl hover:bg-slate-50">Odpovědnost</a>
+          <a href="#kontakt" class="px-4 py-3 rounded-xl hover:bg-slate-50">Kontakt</a>
+          <a href="index.html" class="mx-2 my-2 inline-flex items-center justify-center gap-2 rounded-xl bg-ao.blue px-4 py-3 text-white shadow-soft" style="background:#1f4ed8;color:#fff">Zpět</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl sm:text-4xl font-black text-ao.dark">Podmínky použití</h1>
+    <p class="mt-3 text-slate-800">Tyto podmínky popisují pravidla používání webu DomenAO.cz. Jsou psané stručně a srozumitelně.</p>
+
+    <div class="mt-8 grid gap-6">
+      <section id="prehled" class="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">1) Přehled</h2>
+        <ul class="mt-3 list-disc pl-5 text-sm text-slate-800 space-y-2">
+          <li>Web slouží jako <strong>portfolio a marketplace domén</strong> (prodej, pronájem, spolupráce).</li>
+          <li>Informace na webu jsou <strong>orientační</strong> a mohou se měnit.</li>
+          <li>Odesláním formuláře vzniká <strong>nezávazná poptávka</strong>, ne automatická smlouva.</li>
+        </ul>
+      </section>
+
+      <section id="obsah" class="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">2) Obsah webu a domény</h2>
+        <div class="mt-3 text-sm text-slate-800 space-y-3">
+          <p>Uvedené domény mohou být: aktivní projekt, rozpracovaný koncept, doména určená k prodeji, k pronájmu nebo ke spolupráci.</p>
+          <p>U vybraných domén může být uvedena orientační cena nebo odhad. <strong>Finální podmínky</strong> se řeší individuálně.</p>
+          <p>Pokud poskytnete vlastní doménu k vyhodnocení, potvrzujete, že jste jejím držitelem nebo máte oprávnění jednat.</p>
+        </div>
+      </section>
+
+      <section id="odpovednost" class="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">3) Odpovědnost</h2>
+        <div class="mt-3 text-sm text-slate-800 space-y-3">
+          <p>Web poskytujeme „tak, jak je“. Snažíme se, aby informace byly správné, ale <strong>negenerujeme záruky</strong> bez výslovné dohody.</p>
+          <p>Neodpovídáme za škody způsobené nesprávnou interpretací informací na webu nebo výpadky služeb třetích stran (hosting, e-mail, registrátoři).</p>
+          <p>Odkazy na externí weby (např. projekty/domény) jsou mimo naši přímou kontrolu.</p>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">4) Zakázané používání</h2>
+        <ul class="mt-3 list-disc pl-5 text-sm text-slate-800 space-y-2">
+          <li>zneužívání formulářů (spam),</li>
+          <li>pokusy o narušení bezpečnosti webu,</li>
+          <li>kopírování podstatné části obsahu bez svolení,</li>
+          <li>vydávání se za jinou osobu nebo firmu.</li>
+        </ul>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">5) Duševní vlastnictví</h2>
+        <p class="mt-3 text-sm text-slate-800">Texty, design a struktura webu jsou chráněny autorským právem. Pokud chcete něco použít (např. šablonu), napište nám a domluvíme se.</p>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">6) Změny podmínek</h2>
+        <p class="mt-3 text-sm text-slate-800">Podmínky můžeme aktualizovat. Vždy platí verze zveřejněná na této stránce.</p>
+        <p class="mt-2 text-xs text-slate-600">Poslední aktualizace: <span id="updated"></span></p>
+      </section>
+
+      <section id="kontakt" class="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-extrabold">Kontakt</h2>
+        <p class="mt-3 text-sm text-slate-800">E-mail: <a class="font-semibold hover:underline" href="mailto:info@domenao.cz">info@domenao.cz</a></p>
+        <p class="mt-2 text-sm text-slate-700">Související: <a class="font-semibold hover:underline" href="zasady-ochrany-osobnich-udaju.html">Zásady ochrany osobních údajů</a></p>
+      </section>
+    </div>
+
+    <div class="mt-10 text-sm text-slate-600">
+      <a href="index.html" class="hover:text-ao.blue">← Zpět na DomenAO.cz</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white/80 py-8 text-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="text-slate-600">© <span id="year"></span> AO Group • DomenAO.cz</div>
+        <div class="flex flex-wrap gap-4 text-slate-600">
+          <a href="index.html" class="hover:text-ao.blue">Domů</a>
+          <a href="prodat-domenu.html" class="hover:text-ao.blue">Prodat doménu</a>
+          <a href="zasady-ochrany-osobnich-udaju.html" class="hover:text-ao.blue">GDPR</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = String(new Date().getFullYear());
+
+      const u = document.getElementById('updated');
+      if (u) {
+        const d = new Date();
+        const dd = String(d.getDate()).padStart(2,'0');
+        const mm = String(d.getMonth()+1).padStart(2,'0');
+        const yyyy = d.getFullYear();
+        u.textContent = `${dd}.${mm}.${yyyy}`;
+      }
+
+      // mobile menu safe
+      const burger = document.getElementById('hamburger');
+      const menu = document.getElementById('mobileMenu');
+      const on = (el, ev, fn) => { if (el) el.addEventListener(ev, fn); };
+
+      function setMenu(open){
+        if (!menu || !burger) return;
+        const willOpen = !!open;
+        menu.classList.toggle('hidden', !willOpen);
+        document.body.classList.toggle('overflow-hidden', willOpen);
+        burger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      }
+
+      on(burger, 'click', (e) => {
+        e.stopPropagation();
+        if (!menu) return;
+        setMenu(menu.classList.contains('hidden'));
+      });
+
+      on(document, 'click', (e) => {
+        if (!menu || !burger) return;
+        if (menu.classList.contains('hidden')) return;
+        const within = menu.contains(e.target) || burger.contains(e.target);
+        if (!within) setMenu(false);
+      });
+
+      on(document, 'keydown', (e) => {
+        if (e.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>
